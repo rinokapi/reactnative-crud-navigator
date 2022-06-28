@@ -1,20 +1,81 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+// Navigator
+import HomeScreen from "./pages/homeScreen";
+import CreateScreen from "./pages/createScreen";
+import DetailsScreen from "./pages/detailsScreen";
+import UpdateScreen from "./pages/updateScreen";
+// Navigator
+
+const Stack = createNativeStackNavigator();
+
+// Nested nav
+function Post() {
+	return (
+		<Stack.Navigator
+			screenOptions={{
+				headerStyle: {
+					backgroundColor: "#19C279",
+				},
+				headerTitleStyle: {
+					fontSize: 20,
+					fontWeight: "bold",
+				},
+				animation: "slide_from_right",
+			}}
+		>
+			<Stack.Screen
+				name="Details"
+				component={DetailsScreen}
+				options={{ title: "Details" }}
+			/>
+			<Stack.Screen
+				name="Update"
+				component={UpdateScreen}
+				options={{ title: "Update" }}
+			/>
+		</Stack.Navigator>
+	);
+}
+// Nested nav
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+	return (
+		<NavigationContainer>
+			<Stack.Navigator
+				screenOptions={{
+					headerStyle: {
+						backgroundColor: "#19C279",
+					},
+					headerTitleStyle: {
+						fontSize: 20,
+						fontWeight: "bold",
+					},
+					animation: "slide_from_right",
+				}}
+			>
+				<Stack.Screen
+					name="Home"
+					component={HomeScreen}
+					options={{
+						title: "My Posts",
+					}}
+				/>
+				<Stack.Screen
+					name="Create"
+					component={CreateScreen}
+					options={{
+						title: "Create New Post",
+					}}
+				/>
+				<Stack.Screen
+					name="Post"
+					component={Post}
+					options={{ headerShown: false }}
+				/>
+			</Stack.Navigator>
+		</NavigationContainer>
+	);
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
