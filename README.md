@@ -4,7 +4,7 @@ React native prototype app with CRUD function
 
 ## 📱 Preview
 
-App function preview
+App function preview (gif image)
 
 ![App demo](./img/appPreview/20220809_075137.gif)
 
