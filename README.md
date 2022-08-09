@@ -1,17 +1,21 @@
 # reactnative-crud-navigator
- 
+
+React native prototype app with CRUD function
+
+## 📱 Preview
+
+App function preview
+
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+
+## 🔨 Tools
+
+Tools used in this project
+
 - expo-project
 - react-native
 - react-navigator
 - gorest API
-- CRUD
 - Insomnia
-- vscode
 - node js v12.22.9
-- npm 8.5.1ls
-- git
-- github
-- reactnavigation.org
-- reactnative.dev
-- snack.expo
 - ubuntu/linux
