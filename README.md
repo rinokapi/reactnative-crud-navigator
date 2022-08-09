@@ -6,7 +6,7 @@ React native prototype app with CRUD function
 
 App function preview
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![App demo](./img/appPreview/20220809_075137.gif)
 
 ## 🔨 Tools
 
